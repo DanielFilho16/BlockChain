@@ -1,0 +1,416 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "medico",
+						"type": "address"
+					}
+				],
+				"name": "AcessoConcedido",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "medico",
+						"type": "address"
+					}
+				],
+				"name": "DadosAcessados",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "dados_novos",
+						"type": "string"
+					}
+				],
+				"name": "DadosAtualizados",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "mensagem",
+						"type": "string"
+					}
+				],
+				"name": "NotificacaoPaciente",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					}
+				],
+				"name": "PacienteRegistrado",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "dados",
+						"type": "string"
+					}
+				],
+				"name": "Registrar_novo_paciente",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "administrador",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "dados_novos",
+						"type": "string"
+					}
+				],
+				"name": "atualizar_dados_paciente",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "enderecoMedico",
+						"type": "address"
+					}
+				],
+				"name": "conceder_acesso_medico",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "enderecoMedico",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "duracao",
+						"type": "uint256"
+					}
+				],
+				"name": "conceder_acesso_temp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "token",
+						"type": "string"
+					}
+				],
+				"name": "configurar_token",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "token",
+						"type": "string"
+					}
+				],
+				"name": "obterDadosPacienteComToken",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "dados",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					}
+				],
+				"name": "obterDadosPacienteTemp",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "dados",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					}
+				],
+				"name": "obter_Dados_Paciente",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "dados",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					}
+				],
+				"name": "remover_acesso_medico",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					}
+				],
+				"name": "verHistoricoAcessos",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "medico",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Valida_dados_pacientes.Acesso[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "enderecoPaciente",
+						"type": "address"
+					}
+				],
+				"name": "verHistoricoAlteracoes",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "dados_originais",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "dados_novos",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Valida_dados_pacientes.Alteracao[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/teste03.sol": "Valida_dados_pacientes"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/teste03.sol": {
+			"keccak256": "0xf9cb97aef641d17fdcb14cec440da6f308411b1c10af76885a229f57eb4a58c0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f8393c199306b207a57f19b7ede4bb16a9c3873b4a005a2abc76981bf6fa9120",
+				"dweb:/ipfs/QmanqFRtUagcbwJBt2LQEZNHs5TgQ7iieLfhMnr1VATyTi"
+			]
+		}
+	},
+	"version": 1
+}
